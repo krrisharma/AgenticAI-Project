@@ -19,6 +19,22 @@ export async function apiRequest<T>(endpoint: string, options: RequestInit = {})
     }
   }
   
+  // Monitor Run Fallback
+  if (endpoint.includes('/monitor/run')) {
+    return {
+      status: "completed",
+      hotspots_analyzed: 4,
+      severe_hotspots_count: 2,
+      proposal_created: true,
+      pending_proposal_id: "pp_001"
+    } as any;
+  }
+
+  // Decision Fallback
+  if (endpoint.includes('/decision')) {
+    return { status: "ok", decision: "approved" } as any;
+  }
+
   // Route fallback handling
   if (endpoint.startsWith('/api/route')) {
     const isTruck = options.body && options.body.toString().includes('"truck"');

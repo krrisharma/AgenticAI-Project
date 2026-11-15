@@ -457,3 +457,30 @@ button.btn-reject {
   border: 2px solid #FFFFFF;
   box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
+
+/* Responsive Pass */
+@media (max-width: 1200px) {
+  .panel {
+    width: 320px;
+  }
+  .panel.right {
+    width: 340px;
+  }
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .map-viewport {
+    height: 480px;
+    min-height: 400px;
+  }
+  .panel, .panel.right {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
