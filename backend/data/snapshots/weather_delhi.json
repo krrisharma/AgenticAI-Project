@@ -1,0 +1,10 @@
+{
+  "updated_at": "2026-11-15T12:00:00Z",
+  "temperature_c": 22.4,
+  "relative_humidity_pct": 68,
+  "wind_speed_ms": 1.4,
+  "wind_direction_deg": 310,
+  "boundary_layer_height_m": 420.0,
+  "conditions": "Hazy, low wind dispersion, surface inversion",
+  "source": "snapshot"
+}

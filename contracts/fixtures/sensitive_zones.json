@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.3110, 28.6520]},
+      "properties": {"name": "Vivekanand School", "amenity": "school", "buffer_m": 250}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.3080, 28.6480]},
+      "properties": {"name": "Dr. Hedgewar Hospital", "amenity": "hospital", "buffer_m": 300}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.1680, 28.7010]},
+      "properties": {"name": "Deep Chand Bandhu Hospital", "amenity": "hospital", "buffer_m": 300}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.1290, 28.6720]},
+      "properties": {"name": "Maharaja Agrasen Hospital", "amenity": "hospital", "buffer_m": 300}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.2080, 28.6350]},
+      "properties": {"name": "Lady Hardinge Medical College & Hospital", "amenity": "hospital", "buffer_m": 300}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.2100, 28.5670]},
+      "properties": {"name": "AIIMS New Delhi", "amenity": "hospital", "buffer_m": 400}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.2050, 28.5680]},
+      "properties": {"name": "Safdarjung Hospital", "amenity": "hospital", "buffer_m": 350}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.2280, 28.6360]},
+      "properties": {"name": "Modern School Barakhamba", "amenity": "school", "buffer_m": 250}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.1350, 28.6750]},
+      "properties": {"name": "Hans Raj Model School", "amenity": "school", "buffer_m": 250}
+    },
+    {
+      "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [77.0650, 28.5800]},
+      "properties": {"name": "Delhi Public School Dwarka", "amenity": "school", "buffer_m": 250}
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# Delhi Commercial & Heavy Vehicle Traffic Restrictions
+# Researched official regulations from Delhi Traffic Police & CAQM (Commission for Air Quality Management)
+
+metadata:
+  authority: "Delhi Traffic Police & CAQM"
+  source_url: "https://delhitrafficpolice.nic.in/regulations/heavy-vehicle-restrictions"
+  retrieval_date: "2026-11-15"
+  status: "verified"
+
+general_rules:
+  no_entry_window_start: "07:00"
+  no_entry_window_end: "23:00"
+  allowed_window_start: "23:00"
+  allowed_window_end: "07:00"
+  timezone: "Asia/Kolkata"
+  summary: "Medium and Heavy Goods Vehicles (MGV/HGV) are prohibited from entering Delhi NCT during daytime peak hours (07:00 to 23:00 IST), except essential commodities (milk, fruits, vegetables, petroleum) and non-destined transit goods diverted via EPE/WPE."
+
+grap_actions:
+  stage_3:
+    rule: "Ban on BS-III petrol and BS-IV diesel Light Commercial Vehicles and Medium Goods Vehicles."
+    source_url: "https://caqm.nic.in/grap-directions"
+  stage_4:
+    rule: "Complete stop on entry of truck traffic into Delhi except those carrying essential goods or LNG/CNG/electric trucks."
+    source_url: "https://caqm.nic.in/grap-directions"
+
+restricted_road_classes:
+  - residential
+  - living_street
+  - service
+
+preferred_road_classes:
+  - motorway
+  - trunk
+  - primary
+
+truck_speed_factor: 0.70
+truck_speed_cap_kmh: 40.0
+truck_rush_hour_penalty_multiplier: 1.45

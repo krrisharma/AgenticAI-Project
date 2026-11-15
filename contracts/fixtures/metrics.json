@@ -1,0 +1,13 @@
+{
+  "city_aqi": 272,
+  "city_aqi_category": "Very Poor",
+  "dominant_pollutant": "PM2.5",
+  "active_hotspots_count": 3,
+  "forecast_hotspots_count_6h": 5,
+  "pending_proposals_count": 1,
+  "approved_proposals_today": 3,
+  "avg_exposure_reduction_pct": 18.4,
+  "total_sensitive_zones_shielded": 14,
+  "data_status": "snapshot",
+  "as_of": "2026-11-15T12:00:00Z"
+}

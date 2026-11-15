@@ -1,0 +1,96 @@
+[
+  {
+    "event": "agent_start",
+    "data": {
+      "agent": "supervisor",
+      "timestamp": "2026-11-15T12:00:00Z",
+      "intent": "route_and_advisory"
+    }
+  },
+  {
+    "event": "tool_call",
+    "data": {
+      "agent": "routing",
+      "tool": "compute_routes",
+      "args_summary": "preset_id='noida62_karolbagh', vehicle_type='car', depart_at='2026-11-15T18:00:00Z'"
+    }
+  },
+  {
+    "event": "tool_result",
+    "data": {
+      "agent": "routing",
+      "tool": "compute_routes",
+      "summary": "Computed 3 routes. Fastest: 48.0 min (AQI 245), Cleanest: 53.5 min (AQI 190, -19% exposure)."
+    }
+  },
+  {
+    "event": "agent_start",
+    "data": {
+      "agent": "air",
+      "timestamp": "2026-11-15T12:00:01Z",
+      "intent": "evaluate_corridor_air"
+    }
+  },
+  {
+    "event": "tool_call",
+    "data": {
+      "agent": "air",
+      "tool": "get_hotspots",
+      "args_summary": "horizon_h=6"
+    }
+  },
+  {
+    "event": "tool_result",
+    "data": {
+      "agent": "air",
+      "tool": "get_hotspots",
+      "summary": "Detected 5 hotspots at +6h. Anand Vihar and Vikas Marg cluster show PM2.5 > 250 µg/m³."
+    }
+  },
+  {
+    "event": "agent_start",
+    "data": {
+      "agent": "advisory",
+      "timestamp": "2026-11-15T12:00:02Z",
+      "intent": "generate_health_advisory"
+    }
+  },
+  {
+    "event": "tool_call",
+    "data": {
+      "agent": "advisory",
+      "tool": "rag_search_health",
+      "args_summary": "query='sensitive group precautions during Very Poor AQI'"
+    }
+  },
+  {
+    "event": "tool_result",
+    "data": {
+      "agent": "advisory",
+      "tool": "rag_search_health",
+      "summary": "CPCB guideline advises avoiding prolonged outdoor exertion for asthmatics/children; keep cabin air recirculation on."
+    }
+  },
+  {
+    "event": "token",
+    "data": {
+      "text": "For your trip from Noida Sector 62 to Karol Bagh departing at 6:00 PM, the **Cleanest Route** adds 5.5 minutes of travel time but reduces your toxic PM2.5 particulate exposure by **19.0%**."
+    }
+  },
+  {
+    "event": "token",
+    "data": {
+      "text": " It routes around the congested Vikas Marg corridor and avoids 5 sensitive school zones currently under high pollution stress."
+    }
+  },
+  {
+    "event": "final",
+    "data": {
+      "message": "For your trip from Noida Sector 62 to Karol Bagh departing at 6:00 PM, the Cleanest Route adds 5.5 minutes of travel time but reduces your toxic PM2.5 particulate exposure by 19.0%. It routes around the congested Vikas Marg corridor and avoids 5 sensitive school zones currently under high pollution stress.",
+      "preset_id": "noida62_karolbagh",
+      "vehicle_type": "car",
+      "time_delta_min": 5.5,
+      "exposure_reduction_pct": 19.0
+    }
+  }
+]

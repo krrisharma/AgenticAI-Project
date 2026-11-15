@@ -1,0 +1,98 @@
+[
+  {
+    "id": "noida62_karolbagh",
+    "name": "Noida Sector 62 → Karol Bagh",
+    "from_name": "Noida Sector 62",
+    "to_name": "Karol Bagh",
+    "from_coords": [28.6271, 77.3629],
+    "to_coords": [28.6514, 77.1907],
+    "tag": "general",
+    "baseline_distance_km": 24.2,
+    "baseline_duration_min_car": 46.5,
+    "baseline_duration_min_truck": 72.0
+  },
+  {
+    "id": "janakpuri_w_paschim_vihar_e",
+    "name": "Janakpuri West → Paschim Vihar East",
+    "from_name": "Janakpuri West",
+    "to_name": "Paschim Vihar East",
+    "from_coords": [28.6294, 77.0782],
+    "to_coords": [28.6672, 77.1118],
+    "tag": "general",
+    "baseline_distance_km": 7.8,
+    "baseline_duration_min_car": 18.0,
+    "baseline_duration_min_truck": 30.5
+  },
+  {
+    "id": "anand_vihar_cp",
+    "name": "Anand Vihar ISBT → Connaught Place",
+    "from_name": "Anand Vihar ISBT",
+    "to_name": "Connaught Place",
+    "from_coords": [28.6508, 77.3152],
+    "to_coords": [28.6315, 77.2167],
+    "tag": "general",
+    "baseline_distance_km": 14.5,
+    "baseline_duration_min_car": 32.0,
+    "baseline_duration_min_truck": 55.0
+  },
+  {
+    "id": "dwarka21_nehru_place",
+    "name": "Dwarka Sector 21 → Nehru Place",
+    "from_name": "Dwarka Sector 21",
+    "to_name": "Nehru Place",
+    "from_coords": [28.5522, 77.0583],
+    "to_coords": [28.5492, 77.2533],
+    "tag": "general",
+    "baseline_distance_km": 26.0,
+    "baseline_duration_min_car": 48.0,
+    "baseline_duration_min_truck": 80.0
+  },
+  {
+    "id": "rohini18_lajpat_nagar",
+    "name": "Rohini Sector 18 → Lajpat Nagar",
+    "from_name": "Rohini Sector 18",
+    "to_name": "Lajpat Nagar",
+    "from_coords": [28.7420, 77.1350],
+    "to_coords": [28.5700, 77.2400],
+    "tag": "general",
+    "baseline_distance_km": 30.2,
+    "baseline_duration_min_car": 58.0,
+    "baseline_duration_min_truck": 95.0
+  },
+  {
+    "id": "azadpur_ghazipur",
+    "name": "Azadpur Mandi → Ghazipur Mandi",
+    "from_name": "Azadpur Mandi",
+    "to_name": "Ghazipur Mandi",
+    "from_coords": [28.7150, 77.1780],
+    "to_coords": [28.6250, 77.3320],
+    "tag": "freight",
+    "baseline_distance_km": 28.5,
+    "baseline_duration_min_car": 52.0,
+    "baseline_duration_min_truck": 78.0
+  },
+  {
+    "id": "narela_okhla",
+    "name": "Narela Industrial Area → Okhla Industrial Area",
+    "from_name": "Narela Industrial Area",
+    "to_name": "Okhla Industrial Area",
+    "from_coords": [28.8500, 77.0900],
+    "to_coords": [28.5280, 77.2750],
+    "tag": "freight",
+    "baseline_distance_km": 47.0,
+    "baseline_duration_min_car": 75.0,
+    "baseline_duration_min_truck": 120.0
+  },
+  {
+    "id": "bawana_ghazipur",
+    "name": "Bawana Industrial Area → Ghazipur Mandi",
+    "from_name": "Bawana Industrial Area",
+    "to_name": "Ghazipur Mandi",
+    "from_coords": [28.7950, 77.0420],
+    "to_coords": [28.6250, 77.3320],
+    "tag": "freight",
+    "baseline_distance_km": 42.0,
+    "baseline_duration_min_car": 68.0,
+    "baseline_duration_min_truck": 110.0
+  }
+]

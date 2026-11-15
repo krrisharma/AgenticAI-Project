@@ -1,0 +1,109 @@
+{
+  "updated_at": "2026-11-15T12:00:00Z",
+  "stations": [
+    {
+      "id": "delhi_anand_vihar",
+      "name": "Anand Vihar, Delhi - DPCC",
+      "lat": 28.6508,
+      "lon": 77.3152,
+      "pm25": 284.5,
+      "pm10": 395.2,
+      "no2": 68.4,
+      "aqi": 348,
+      "category": "Severe",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "delhi_ito",
+      "name": "ITO, New Delhi - CPCB",
+      "lat": 28.6312,
+      "lon": 77.2494,
+      "pm25": 195.0,
+      "pm10": 280.4,
+      "no2": 52.1,
+      "aqi": 258,
+      "category": "Very Poor",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "delhi_rk_puram",
+      "name": "R K Puram, New Delhi - DPCC",
+      "lat": 28.5633,
+      "lon": 77.1869,
+      "pm25": 165.2,
+      "pm10": 235.1,
+      "no2": 45.0,
+      "aqi": 232,
+      "category": "Very Poor",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "delhi_punjabi_bagh",
+      "name": "Punjabi Bagh, New Delhi - DPCC",
+      "lat": 28.6741,
+      "lon": 77.1310,
+      "pm25": 210.8,
+      "pm10": 310.0,
+      "no2": 58.0,
+      "aqi": 272,
+      "category": "Very Poor",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "delhi_mandir_marg",
+      "name": "Mandir Marg, New Delhi - DPCC",
+      "lat": 28.6365,
+      "lon": 77.2011,
+      "pm25": 135.0,
+      "pm10": 195.0,
+      "no2": 39.5,
+      "aqi": 190,
+      "category": "Poor",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "delhi_dwarka_sec8",
+      "name": "Dwarka-Sector 8, Delhi - DPCC",
+      "lat": 28.5710,
+      "lon": 77.0719,
+      "pm25": 145.4,
+      "pm10": 215.3,
+      "no2": 41.2,
+      "aqi": 205,
+      "category": "Poor",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "noida_sector_62",
+      "name": "Sector-62, Noida - UPPCB",
+      "lat": 28.6271,
+      "lon": 77.3629,
+      "pm25": 182.0,
+      "pm10": 260.0,
+      "no2": 48.0,
+      "aqi": 245,
+      "category": "Very Poor",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    },
+    {
+      "id": "delhi_wazirpur",
+      "name": "Wazirpur, Delhi - DPCC",
+      "lat": 28.6998,
+      "lon": 77.1654,
+      "pm25": 270.0,
+      "pm10": 380.0,
+      "no2": 65.0,
+      "aqi": 332,
+      "category": "Severe",
+      "dominant_pollutant": "pm25",
+      "source": "snapshot"
+    }
+  ]
+}

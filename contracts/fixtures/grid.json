@@ -1,0 +1,25 @@
+{
+  "grid": [
+    {"lat": 28.65, "lon": 77.31, "pm25": 275.4, "aqi": 338, "category": "Severe"},
+    {"lat": 28.63, "lon": 77.25, "pm25": 192.1, "aqi": 255, "category": "Very Poor"},
+    {"lat": 28.56, "lon": 77.19, "pm25": 160.8, "aqi": 228, "category": "Very Poor"},
+    {"lat": 28.67, "lon": 77.13, "pm25": 208.5, "aqi": 270, "category": "Very Poor"},
+    {"lat": 28.64, "lon": 77.20, "pm25": 138.2, "aqi": 195, "category": "Poor"},
+    {"lat": 28.57, "lon": 77.07, "pm25": 142.0, "aqi": 201, "category": "Poor"},
+    {"lat": 28.63, "lon": 77.36, "pm25": 180.2, "aqi": 243, "category": "Very Poor"},
+    {"lat": 28.70, "lon": 77.17, "pm25": 265.1, "aqi": 328, "category": "Severe"},
+    {"lat": 28.50, "lon": 77.28, "pm25": 175.0, "aqi": 238, "category": "Very Poor"},
+    {"lat": 28.75, "lon": 77.10, "pm25": 230.0, "aqi": 290, "category": "Very Poor"},
+    {"lat": 28.60, "lon": 77.05, "pm25": 128.0, "aqi": 180, "category": "Moderate"},
+    {"lat": 28.53, "lon": 77.24, "pm25": 155.0, "aqi": 220, "category": "Very Poor"}
+  ],
+  "bounds": {
+    "min_lat": 28.40,
+    "max_lat": 28.88,
+    "min_lon": 76.84,
+    "max_lon": 77.38
+  },
+  "resolution_km": 2.0,
+  "data_status": "snapshot",
+  "as_of": "2026-11-15T12:00:00Z"
+}

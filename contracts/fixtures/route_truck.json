@@ -1,0 +1,83 @@
+{
+  "vehicle_type": "truck",
+  "preset_id": "azadpur_ghazipur",
+  "routes": [
+    {
+      "mode": "fastest",
+      "geometry": [
+        [28.7150, 77.1780],
+        [28.7000, 77.2100],
+        [28.6600, 77.2700],
+        [28.6350, 77.3100],
+        [28.6250, 77.3320]
+      ],
+      "distance_km": 28.5,
+      "duration_min": 78.0,
+      "avg_pm25": 240.2,
+      "exposure_index": 18735.6,
+      "sensitive_zones_passed": 5,
+      "truck": {
+        "emission_impact": 142.8,
+        "km_in_hotspots": 8.4,
+        "restricted_segments": 0,
+        "compliance": "not_allowed_at_time",
+        "next_allowed_window": "23:00 - 07:00 IST",
+        "restriction_reason": "Delhi Traffic Police Peak Hours Heavy Vehicle Entry Restriction"
+      }
+    },
+    {
+      "mode": "cleanest",
+      "geometry": [
+        [28.7150, 77.1780],
+        [28.7350, 77.2200],
+        [28.6900, 77.3000],
+        [28.6500, 77.3400],
+        [28.6250, 77.3320]
+      ],
+      "distance_km": 33.2,
+      "duration_min": 89.0,
+      "avg_pm25": 165.0,
+      "exposure_index": 14685.0,
+      "sensitive_zones_passed": 1,
+      "truck": {
+        "emission_impact": 94.2,
+        "km_in_hotspots": 2.1,
+        "restricted_segments": 0,
+        "compliance": "not_allowed_at_time",
+        "next_allowed_window": "23:00 - 07:00 IST",
+        "restriction_reason": "Delhi Traffic Police Peak Hours Heavy Vehicle Entry Restriction"
+      }
+    },
+    {
+      "mode": "balanced",
+      "geometry": [
+        [28.7150, 77.1780],
+        [28.7200, 77.2000],
+        [28.6750, 77.2800],
+        [28.6400, 77.3200],
+        [28.6250, 77.3320]
+      ],
+      "distance_km": 30.6,
+      "duration_min": 82.5,
+      "avg_pm25": 195.0,
+      "exposure_index": 16087.5,
+      "sensitive_zones_passed": 2,
+      "truck": {
+        "emission_impact": 112.5,
+        "km_in_hotspots": 4.5,
+        "restricted_segments": 0,
+        "compliance": "not_allowed_at_time",
+        "next_allowed_window": "23:00 - 07:00 IST",
+        "restriction_reason": "Delhi Traffic Police Peak Hours Heavy Vehicle Entry Restriction"
+      }
+    }
+  ],
+  "comparison": {
+    "time_delta_min": 11.0,
+    "exposure_reduction_pct": 21.6,
+    "emission_impact_reduction_pct": 34.0,
+    "hotspot_km_saved": 6.3
+  },
+  "data_status": "snapshot",
+  "as_of": "2026-11-15T12:00:00Z"
+}

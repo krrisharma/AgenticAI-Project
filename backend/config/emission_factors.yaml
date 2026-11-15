@@ -1,0 +1,27 @@
+# ClearPath Emission Factors Configuration
+# Note: All factors are labelled as ESTIMATES in code and UI
+# Sources: ARAI (Automotive Research Association of India) & CPCB Vehicular Emission Estimates
+
+metadata:
+  status: estimate
+  source: "ARAI / CPCB Emission Factor Guidelines (Composite urban driving cycle)"
+  updated_at: "2026-11-15"
+
+vehicles:
+  car:
+    description: "Average passenger car (petrol / diesel / CNG composite)"
+    pm25_g_per_km: 0.045
+    no2_g_per_km: 0.380
+    co2_g_per_km: 142.0
+
+  truck:
+    description: "Medium to Heavy Commercial Vehicle (M/HCV Diesel BS-IV/VI blend)"
+    pm25_g_per_km: 0.480
+    no2_g_per_km: 4.250
+    co2_g_per_km: 780.0
+
+zone_multipliers:
+  normal: 1.0
+  hotspot: 2.2
+  sensitive_zone_buffer: 1.8
+  severe_hotspot: 3.0
