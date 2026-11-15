@@ -51,6 +51,7 @@ export const App: React.FC = () => {
   const [showHotspots, setShowHotspots] = useState<boolean>(true);
   const [showSensitive, setShowSensitive] = useState<boolean>(true);
   const [showRestrictions, setShowRestrictions] = useState<boolean>(true);
+  const [basemap, setBasemap] = useState<'light' | 'osm'>('light');
 
   // Chat & Stream State
   const [chatMessages, setChatMessages] = useState<Array<{ role: string; content: string }>>([
@@ -554,6 +555,7 @@ export const App: React.FC = () => {
             showHotspots={showHotspots}
             showSensitive={showSensitive}
             showRestrictions={showRestrictions}
+            basemap={basemap}
           />
 
           {/* Layer Controls Top Right Overlay */}
@@ -561,6 +563,26 @@ export const App: React.FC = () => {
             <div style={{ fontWeight: 600, borderBottom: '1px solid var(--border)', paddingBottom: 4 }}>
               Map Layers
             </div>
+            
+            <div style={{ display: 'flex', gap: 6, margin: '2px 0 6px' }}>
+              <button 
+                type="button"
+                className={`horizon-btn ${basemap === 'light' ? 'active' : ''}`}
+                style={{ flex: 1, border: '1px solid var(--border)' }}
+                onClick={() => setBasemap('light')}
+              >
+                Light Canvas
+              </button>
+              <button 
+                type="button"
+                className={`horizon-btn ${basemap === 'osm' ? 'active' : ''}`}
+                style={{ flex: 1, border: '1px solid var(--border)' }}
+                onClick={() => setBasemap('osm')}
+              >
+                OpenStreetMap
+              </button>
+            </div>
+
             <label className="layer-toggle">
               <input type="checkbox" checked={showGrid} onChange={e => setShowGrid(e.target.checked)} />
               <span>AQI Heatmap Grid</span>

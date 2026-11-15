@@ -27,6 +27,10 @@ All data sources used in ClearPath are cited, verified, cached, and carry fallba
 - **Sensitive Features:** `amenity=school`, `amenity=hospital`, `amenity=clinic`, `amenity=college`.
 - **License:** Open Database License (ODbL) © OpenStreetMap contributors.
 
+## 4B. Map Basemap Tile Provider Update
+- **Observation:** CARTO updated its public raster tile policy to require an API key (`?key=...`), watermarking "API KEY REQUIRED" on free unauthenticated requests.
+- **Resolution:** In accordance with Section 0 Rule 4, ClearPath has updated the default basemap to **ESRI World Light Gray Canvas** (`https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}`) and **OpenStreetMap Standard** (`https://tile.openstreetmap.org/{z}/{x}/{y}.png`), which are 100% free and open, requiring zero API keys. Optional `VITE_CARTO_API_KEY` is supported if provided.
+
 ## 5. Traffic Congestion Model
 - **Primary Source:** Deterministic synthetic traffic congestion model:
   - Hour-of-day rush curves (morning peak 8:00-11:00, evening peak 17:30-21:00).

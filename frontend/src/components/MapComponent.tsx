@@ -14,6 +14,7 @@ interface MapProps {
   showHotspots: boolean;
   showSensitive: boolean;
   showRestrictions: boolean;
+  basemap?: 'light' | 'osm';
   onSelectHotspot?: (hs: any) => void;
 }
 
@@ -39,10 +40,12 @@ export const MapComponent: React.FC<MapProps> = ({
   showHotspots,
   showSensitive,
   showRestrictions,
+  basemap = 'light',
   onSelectHotspot
 }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
+  const tileLayerRef = useRef<L.TileLayer | null>(null);
   const layersRef = useRef<{ [key: string]: L.LayerGroup }>({});
 
   useEffect(() => {
@@ -55,11 +58,19 @@ export const MapComponent: React.FC<MapProps> = ({
       zoomControl: true
     });
 
-    // CARTO Positron light basemap
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      maxZoom: 19
+    // 100% Free Open Basemap (No API key required)
+    // Uses OpenStreetMap & ESRI Light Gray Canvas to avoid CARTO's paid/key-gated watermark
+    const cartoKey = import.meta.env.VITE_CARTO_API_KEY;
+    const tileUrl = cartoKey 
+      ? `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${cartoKey}`
+      : 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+
+    const tileLayer = L.tileLayer(tileUrl, {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; Esri',
+      maxZoom: 18
     }).addTo(map);
+
+    tileLayerRef.current = tileLayer;
 
     layersRef.current.grid = L.layerGroup().addTo(map);
     layersRef.current.stations = L.layerGroup().addTo(map);
@@ -75,6 +86,35 @@ export const MapComponent: React.FC<MapProps> = ({
       mapInstanceRef.current = null;
     };
   }, []);
+
+  // Update Basemap when toggled
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    if (tileLayerRef.current) {
+      map.removeLayer(tileLayerRef.current);
+    }
+
+    const cartoKey = import.meta.env.VITE_CARTO_API_KEY;
+    let url = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+    let attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; Esri';
+
+    if (basemap === 'osm') {
+      url = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+      attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    } else if (cartoKey) {
+      url = `https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=${cartoKey}`;
+      attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; CARTO';
+    }
+
+    const newLayer = L.tileLayer(url, {
+      attribution: attr,
+      maxZoom: 18
+    }).addTo(map);
+
+    tileLayerRef.current = newLayer;
+  }, [basemap]);
 
   // Update Grid
   useEffect(() => {
