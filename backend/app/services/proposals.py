@@ -6,9 +6,9 @@ from app.config import settings
 from app.models import PolicyProposal, ProposalAction
 
 def get_db_connection():
-    settings.DATA_DIR_PATH = settings.CONFIG_DIR.parent / "data"
-    settings.DATA_DIR_PATH.mkdir(parents=True, exist_ok=True)
-    db_path = settings.DATA_DIR_PATH / "clearpath.db"
+    data_dir = settings.CONFIG_DIR.parent / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    db_path = data_dir / "clearpath.db"
     conn = sqlite3.connect(str(db_path))
     conn.row_factory = sqlite3.Row
     return conn
