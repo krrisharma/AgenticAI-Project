@@ -1,0 +1,63 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "jurisdiction": "Delhi NCT",
+    "authority": "Delhi Traffic Police & CAQM (GRAP)",
+    "general_no_entry_window": "07:00 - 23:00 IST (Non-essential heavy vehicles)",
+    "allowed_window": "23:00 - 07:00 IST",
+    "essential_goods_exemption": true,
+    "bs3_petrol_bs4_diesel_ban_stage": "GRAP Stage III & IV",
+    "source_url": "https://delhitrafficpolice.nic.in/regulations/heavy-vehicle-restrictions",
+    "retrieved_at": "2026-11-15T00:00:00Z"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.2100, 28.6300],
+          [77.2200, 28.6350],
+          [77.2300, 28.6300]
+        ]
+      },
+      "properties": {
+        "name": "Connaught Place Inner & Outer Circles",
+        "restriction_type": "permanent_heavy_prohibited",
+        "allowed_hours": "none"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.1700, 28.5800],
+          [77.2000, 28.5700],
+          [77.2400, 28.5700]
+        ]
+      },
+      "properties": {
+        "name": "Mahatma Gandhi Ring Road - South Section",
+        "restriction_type": "daytime_peak_prohibited",
+        "allowed_hours": "23:00-07:00"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.2800, 28.6400],
+          [77.3000, 28.6500],
+          [77.3150, 28.6508]
+        ]
+      },
+      "properties": {
+        "name": "Vikas Marg Corridor",
+        "restriction_type": "daytime_peak_prohibited",
+        "allowed_hours": "23:00-07:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "vehicle_type": "car",
+  "preset_id": "noida62_karolbagh",
+  "routes": [
+    {
+      "mode": "fastest",
+      "geometry": [
+        [28.6271, 77.3629],
+        [28.6285, 77.3340],
+        [28.6240, 77.2950],
+        [28.6315, 77.2494],
+        [28.6330, 77.2180],
+        [28.6514, 77.1907]
+      ],
+      "distance_km": 24.2,
+      "duration_min": 48.0,
+      "avg_pm25": 195.4,
+      "exposure_index": 9379.2,
+      "sensitive_zones_passed": 7,
+      "truck": null
+    },
+    {
+      "mode": "cleanest",
+      "geometry": [
+        [28.6271, 77.3629],
+        [28.6050, 77.3500],
+        [28.5850, 77.3100],
+        [28.5700, 77.2400],
+        [28.5900, 77.2000],
+        [28.6300, 77.1850],
+        [28.6514, 77.1907]
+      ],
+      "distance_km": 27.4,
+      "duration_min": 53.5,
+      "avg_pm25": 142.0,
+      "exposure_index": 7597.0,
+      "sensitive_zones_passed": 2,
+      "truck": null
+    },
+    {
+      "mode": "balanced",
+      "geometry": [
+        [28.6271, 77.3629],
+        [28.6180, 77.3400],
+        [28.6000, 77.2900],
+        [28.6100, 77.2300],
+        [28.6350, 77.2000],
+        [28.6514, 77.1907]
+      ],
+      "distance_km": 25.1,
+      "duration_min": 50.2,
+      "avg_pm25": 160.5,
+      "exposure_index": 8057.1,
+      "sensitive_zones_passed": 3,
+      "truck": null
+    }
+  ],
+  "comparison": {
+    "time_delta_min": 5.5,
+    "exposure_reduction_pct": 19.0
+  },
+  "data_status": "snapshot",
+  "as_of": "2026-11-15T12:00:00Z"
+}

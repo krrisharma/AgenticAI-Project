@@ -1,0 +1,14 @@
+{
+  "hour": 18,
+  "provider": "synthetic",
+  "city_congestion_index": 0.74,
+  "road_classes": {
+    "motorway": {"speed_factor_car": 0.65, "speed_factor_truck": 0.50},
+    "trunk": {"speed_factor_car": 0.55, "speed_factor_truck": 0.40},
+    "primary": {"speed_factor_car": 0.45, "speed_factor_truck": 0.32},
+    "secondary": {"speed_factor_car": 0.50, "speed_factor_truck": 0.35},
+    "tertiary": {"speed_factor_car": 0.60, "speed_factor_truck": 0.45}
+  },
+  "data_status": "snapshot",
+  "as_of": "2026-11-15T12:00:00Z"
+}

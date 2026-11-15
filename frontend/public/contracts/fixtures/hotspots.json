@@ -1,0 +1,52 @@
+{
+  "horizon_h": 0,
+  "hotspots": [
+    {
+      "id": "hs_001",
+      "name": "Anand Vihar Transport Cluster",
+      "centroid": {"lat": 28.6508, "lon": 77.3152},
+      "radius_m": 1600,
+      "pm25": 284.5,
+      "aqi": 348,
+      "category": "Severe",
+      "horizon_h": 0,
+      "drivers": ["low wind speed (< 1.2 m/s)", "interstate diesel bus terminal", "stagnant evening boundary layer"],
+      "nearby_sensitive_zones": [
+        {"type": "school", "name": "Vivekanand School Anand Vihar", "distance_m": 480},
+        {"type": "hospital", "name": "Dr. Hedgewar Arogya Sansthan", "distance_m": 820}
+      ]
+    },
+    {
+      "id": "hs_002",
+      "name": "Wazirpur Industrial Corridor",
+      "centroid": {"lat": 28.6998, "lon": 77.1654},
+      "radius_m": 1400,
+      "pm25": 270.0,
+      "aqi": 332,
+      "category": "Severe",
+      "horizon_h": 0,
+      "drivers": ["industrial combustion emissions", "heavy commercial freight movement", "low dispersion"],
+      "nearby_sensitive_zones": [
+        {"type": "school", "name": "Govt Sarvodaya Kanya Vidyalaya Wazirpur", "distance_m": 350},
+        {"type": "hospital", "name": "Deep Chand Bandhu Hospital", "distance_m": 920}
+      ]
+    },
+    {
+      "id": "hs_003",
+      "name": "Punjabi Bagh Arterial Junction",
+      "centroid": {"lat": 28.6741, "lon": 77.1310},
+      "radius_m": 1200,
+      "pm25": 210.8,
+      "aqi": 272,
+      "category": "Very Poor",
+      "horizon_h": 0,
+      "drivers": ["Ring Road peak traffic bottle-neck", "stop-and-go congestion", "elevated road dust"],
+      "nearby_sensitive_zones": [
+        {"type": "school", "name": "Hans Raj Model School", "distance_m": 410},
+        {"type": "hospital", "name": "Maharaja Agrasen Hospital", "distance_m": 600}
+      ]
+    }
+  ],
+  "data_status": "snapshot",
+  "as_of": "2026-11-15T12:00:00Z"
+}

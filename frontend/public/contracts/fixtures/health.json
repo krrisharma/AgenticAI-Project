@@ -1,0 +1,11 @@
+{
+  "status": "ok",
+  "data_status": "live",
+  "as_of": "2026-11-15T12:00:00Z",
+  "sources": {
+    "openaq": "live",
+    "open_meteo_aq": "live",
+    "open_meteo_weather": "live",
+    "traffic": "synthetic"
+  }
+}

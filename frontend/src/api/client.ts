@@ -1,27 +1,37 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://localhost:8000' : '');
 
 export async function apiRequest<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const url = `${API_BASE}${endpoint}`;
-  try {
-    const res = await fetch(url, {
-      ...options,
-      headers: {
-        'Content-Type': 'application/json',
-        ...(options.headers || {})
+  if (API_BASE) {
+    const url = `${API_BASE}${endpoint}`;
+    try {
+      const res = await fetch(url, {
+        ...options,
+        headers: {
+          'Content-Type': 'application/json',
+          ...(options.headers || {})
+        }
+      });
+      if (res.ok) {
+        return await res.json();
       }
-    });
-    if (res.ok) {
-      return await res.json();
+    } catch (e) {
+      console.warn(`API call ${endpoint} failed, falling back to local snapshot fixtures:`, e);
     }
-  } catch (e) {
-    console.warn(`API call ${endpoint} failed, falling back to local snapshot fixtures:`, e);
   }
   
+  // Route fallback handling
+  if (endpoint.startsWith('/api/route')) {
+    const isTruck = options.body && options.body.toString().includes('"truck"');
+    const fRes = await fetch(isTruck ? '/contracts/fixtures/route_truck.json' : '/contracts/fixtures/route_car.json');
+    return await fRes.json();
+  }
+
   // Fixture fallback mapping
   const fixtureMap: Record<string, string> = {
     '/api/health': '/contracts/fixtures/health.json',
     '/api/aqi/stations': '/contracts/fixtures/stations.json',
     '/api/aqi/grid': '/contracts/fixtures/grid.json',
+    '/api/aqi/forecast': '/contracts/fixtures/forecast.json',
     '/api/hotspots': '/contracts/fixtures/hotspots.json',
     '/api/sensitive-zones': '/contracts/fixtures/sensitive_zones.json',
     '/api/presets': '/contracts/fixtures/presets.json',

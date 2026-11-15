@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { api } from './api/client';
+import { api, API_BASE } from './api/client';
 import { MapComponent } from './components/MapComponent';
 import { 
   Shield, 
@@ -175,7 +175,8 @@ export const App: React.FC = () => {
     setIsStreaming(true);
 
     try {
-      const res = await fetch('http://localhost:8000/api/agent/chat/stream', {
+      const streamUrl = API_BASE ? `${API_BASE}/api/agent/chat/stream` : '/api/agent/chat/stream';
+      const res = await fetch(streamUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
